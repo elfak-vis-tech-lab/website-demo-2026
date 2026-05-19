@@ -137,6 +137,7 @@ nav li::marker {
   height: 70px;
   width: 70px;
   border-radius: 50%;
+  flex-shrink: 0;
 }
 
 .timeline-item {
@@ -161,4 +162,27 @@ nav li::marker {
 
 .content-reverse {
   text-align: right;
+}
+
+@media screen and (max-width: 350px) {
+  .timeline-item-placeholder {
+    display: none;
+  }
+
+  .reverse {
+    flex-direction: row;
+  }
+
+  .content-reverse {
+    text-align: left;
+  }
+
+  .timeline-line-container {
+    justify-content: start;
+    padding-left: 35px;
+  }
+
+  .last-item {
+    justify-content: start;
+  }
 }
