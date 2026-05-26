@@ -1,6 +1,16 @@
 * {
   padding: 0;
   margin: 0;
+  font-family: 'Roboto Slab', serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Montserrat', sans-serif;
 }
 
 .navbar {
@@ -29,9 +39,26 @@ nav li::marker {
 
 .site-header {
   height: 100vh;
-  background-color: antiquewhite;
+  /* background-color: antiquewhite; */
   display: flex;
+  /* background-color: rgba(255, 255, 255, 0.396); */
   flex-direction: column;
+  position: relative;
+}
+
+.site-header h1,
+.site-header h3 {
+  color: white;
+}
+
+.header-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  object-fit: cover;
 }
 
 .hero {
@@ -71,6 +98,10 @@ nav li::marker {
   text-align: center;
 }
 
+.service-title {
+  text-align: center;
+}
+
 .service-container {
   display: flex;
   justify-content: space-around; /*center*/
@@ -83,6 +114,13 @@ nav li::marker {
   background-color: #ffc800;
   width: 100px;
   height: 100px;
+  border-radius: 50%;
+  padding: 5px;
+}
+
+.timeline-icon img {
+  height: 100%;
+  width: 100%;
   border-radius: 50%;
 }
 
@@ -138,6 +176,7 @@ nav li::marker {
   width: 70px;
   border-radius: 50%;
   flex-shrink: 0;
+  padding: 5px;
 }
 
 .timeline-item {
@@ -162,6 +201,43 @@ nav li::marker {
 
 .content-reverse {
   text-align: right;
+}
+
+.team {
+  padding: 50px 0;
+}
+
+.team-member-list {
+  margin: 50px 0;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.member-image-container {
+  background-color: lightgray;
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+}
+
+.team-member {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.member-social-links {
+  display: flex;
+  gap: 10px;
+}
+
+.social-link {
+  background-color: black;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
 }
 
 @media screen and (max-width: 350px) {
